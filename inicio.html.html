@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rewind — Vinis, CDs e DVDs</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="inicio.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="icon" href="caminho/para/seu/favicon.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- logo grande -->
+      <a class="brand" href="index.html" aria-label="Rewind — Home">
+        <img id="logo" src="logo.png.png" alt="Logo Rewind">
+      </a>
+
+      <!-- search central -->
+      <div class="search-wrap" role="search" aria-label="Pesquisar produtos">
+        <select id="search-scope" aria-label="Escopo da pesquisa">
+          <option value="all">Todos</option>
+          <option value="vinil">Discos</option>
+          <option value="cd">CDs</option>
+          <option value="dvd">DVDs</option>
+        </select>
+        <input id="searchInput" type="search" placeholder="Pesquise seu disco favorito..." />
+        <button id="searchBtn" aria-label="Pesquisar"><i class="fa fa-search"></i></button>
+      </div>
+
+      <!-- icons area -->
+      <div class="header-icons">
+        <a href="login.html" class="icon-btn" id="loginBtn" title="Minha Conta"><i class="fa fa-user"></i></a>
+        <a href="favoritos.html" class="icon-btn" id="favBtn" title="Favoritos"><i class="fa fa-heart"></i></a>
+        <a href="carrinho.html" class="icon-btn cart" id="cartBtn" title="Carrinho">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cartCount" aria-live="polite">0</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- main categories/menu (sticky) -->
+    <nav class="main-nav" aria-label="Categorias principais">
+      <ul>
+        <li class="nav-item nav-dropdown">
+          <button id="genreToggle" aria-expanded="false" aria-controls="genreMenu">Gênero <i class="fa fa-angle-down"></i></button>
+          <div id="genreMenu" class="dropdown-panel" aria-hidden="true">
+            <ul>
+              <li><button class="genre-item">Rock</button></li>
+              <li><button class="genre-item">MPB</button></li>
+              <li><button class="genre-item">Sertanejo</button></li>
+              <li><button class="genre-item">Pop</button></li>
+              <li><button class="genre-item">Kpop</button></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item"><a href="discos.html">DISCOS</a></li>
+        <li class="nav-item"><a href="cds.html">CDS</a></li>
+        <li class="nav-item"><a href="dvds.html">DVDS</a></li>
+        <li class="nav-item"><a href="quem-somos.html">QUEM SOMOS</a></li>
+        <li class="nav-item"><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="container main-area">
+
+    <!-- CATEGORIAS LATERAIS -->
+    <aside class="sidebar">
+      <div class="side-box">
+        <h4>Categorias de Produto</h4>
+        <ul class="side-list">
+          <li><a href="discos.html">Discos de Vinil</a></li>
+          <li><a href="cds.html">CDs</a></li>
+          <li><a href="dvds.html">DVDs</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ÁREA DE PRODUTOS -->
+    <main class="content">
+      <!-- Promoções — texto descritivo + cards -->
+      <section class="promotions">
+        <div class="promo-head">
+          <h2>Promoções da Semana</h2>
+          <p class="promo-lead">Aproveite seleções especiais desta semana — clássicos, relançamentos e edições em ótimo preço. Estoque limitado. Compras e pagamentos são finalizados via WhatsApp.</p>
+        </div>
+
+        <div class="promo-grid" id="productGrid">
+         <article class="product-card" data-type="vinil" data-title="ENHYPEN - Romance: Untold">
+        <figure><img src="enhypen (2).jpeg" alt="ENHYPEN - Romance: Untold"></figure>
+         <h3>ENHYPEN — Romance: Untold (Vinil)</h3>
+         <div class="price">R$ 259,90</div>
+         <div class="actions">
+              <button class="btn-add">Adicionar ao carrinho</button>
+              <button class="btn-fav" title="Favoritar"><i class="fa fa-heart"></i></button>
+            </div>
+          </article>
+
+            <article class="product-card" data-type="vinil" data-title="Frank Ocean - Blonde">
+         <figure><img src="frankocean.png" alt="Frank Ocean - Blonde"></figure>
+          <h3>Frank Ocean — Channel Orange (Vinil)</h3>
+           <div class="price">R$ 199,90</div>
+           <div class="actions">
+              <button class="btn-add">Adicionar ao carrinho</button>
+              <button class="btn-fav" title="Favoritar"><i class="fa fa-heart"></i></button>
+            </div>
+          </article>
+
+               <article class="product-card" data-type="vinil" data-title="Sade - Love Deluxe">
+           <figure><img src="sade.png" alt="Sade - Love Deluxe"></figure>
+        <h3>Sade — Love Deluxe (Vinil)</h3>
+          <div class="price">R$ 189,90</div>
+          <div class="actions">
+              <button class="btn-add">Adicionar ao carrinho</button>
+              <button class="btn-fav" title="Favoritar"><i class="fa fa-heart"></i></button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- INFORMAÇÕES / CONFIANÇA -->
+      <section class="why">
+        <h3>Por que comprar na Rewind?</h3>
+        <p>Somos especializados em discos físicos: vinis, CDs e DVDs. Trabalhamos com curadoria, embalagem segura e atendimento personalizado via WhatsApp. Antes de finalizar, verifique nossa seção <strong>Como Comprar</strong> no rodapé.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <!-- colocamos logo com fundo levemente escuro para ficar visível -->
+        <div class="logo-footer-wrap"><img src="Rewind.png" alt="Logo Rewind footer"></div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="como-comprar.html">Como Comprar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <h4>Informações</h4>
+        <p>Vendas realizadas via WhatsApp. Atendimento: seg-sex 8h–17h.</p>
+        <p>Email: <a href="mailto:contato@rewind.com.br">contato@rewind.com.br</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© 2025 Rewind. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
